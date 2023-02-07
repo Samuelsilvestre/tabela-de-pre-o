@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div>
+    <p>Excluir informação da tabela</p>
+</div>
+  <form action="." method="post">
+    {% csrf_token %}
+    <p>Deletar {{ object.produto }} {{ object.servico }} da tabela </p>
+    <input type="submit" value="Excluir">
+  </form>
+  <a href="{% url 'index' %}">Cancelar</a>
+{% endblock main %}
